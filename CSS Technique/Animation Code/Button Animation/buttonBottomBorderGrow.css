@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 100vh;
+}
+button {
+  margin: 2rem;
+}
+.btn {
+  background: var(--background-color);
+  color: var(--font-color);
+  --background-color: rgb(226, 254, 213);
+  --font-color: rgb(63, 5, 5);
+  --accent-color:rgb(7, 158, 10);
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  /* defualt button border black 
+    here removed through border none*/
+  outline: none;
+  /* the button's focus state or if 
+    you prefer not to display the outline 
+    at all.  */
+
+  position: relative;
+  cursor: pointer;
+  --border-size: 5px;
+}
+.btn.btn-border-underline::before{
+    content: "";
+    position: absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 1s ease-in-out;
+  }
+  .btn.btn-border-underline:hover:before,
+  .btn.btn-border-underline:focus:before{
+    transform: scaleX(1);
+  }

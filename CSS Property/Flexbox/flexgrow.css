@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .parent {
+    height: 100vh;
+    width: 1200px;
+    background: #f78e8e;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:;
+  }
+  .parent > div {
+    font-size: 30px;
+    color: aliceblue;
+    text-align: center;
+    line-height: 100px;
+  }
+  .child {
+    width: 100px;
+    height: 100px;
+  }
+  .child1 {
+    background: #943939;
+    /* default order 0 heigher number give more preference */
+    order: 0;
+    
+  }
+  .child2 {
+    background: #16c024;
+    order: 0;
+    align-self: center;
+  }
+  .child3 {
+    background: #70cd13;
+    order: 0;
+    align-self: flex-end;
+  }
+  .child4 {
+    background: #4e2c2c;
+    order: 0;
+  }
+  .child5 {
+    background: #290fb8;
+    order: 0;
+  }
+  .child6 {
+    background: #6b61dc;
+    order: 0;
+  }
+  
+  

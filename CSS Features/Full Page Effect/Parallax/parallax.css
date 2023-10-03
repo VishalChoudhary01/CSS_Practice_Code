@@ -1,0 +1,88 @@
+:root {
+  --dark-color: rgb(9, 68, 3);
+  --light-color: rgb(81, 219, 240);
+  --primary-color: gray;
+  --head-bgcolor: rgb(29, 4, 4);
+  --head-txtcolor: rgb(241, 248, 114);
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: var(--primary-color);
+}
+
+.image1 {
+  background-image: url(sunset_sea_bird.jpg);
+  min-height: 100%;
+}
+.image2 {
+  background-image: url(railroad.jpg);
+  min-height: 550px;
+}
+.image3 {
+  background-image: url(tree.jpg);
+  min-height: 550px;
+}
+.image4 {
+  background-image: url(autumn.jpg);
+  min-height: 550px;
+}
+.image1,
+.image2,
+.image3,
+.image4 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.text1 {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  text-align: center;
+  font-size: 60px;
+  word-spacing: 40px;
+  letter-spacing: 4px;
+}
+.textBag {
+  background-color: var(--head-bgcolor);
+  color: var(--head-txtcolor);
+  border: 5px solid black;
+  border-radius: 10px;
+}
+.section > p {
+  margin: 10px 30px;
+  line-height: 35px;
+  word-spacing: 12px;
+  font-size: 20px;
+}
+
+h2 {
+  margin: 10px;
+  color: rgb(224, 27, 5);
+  /* font-family:Overpass, sans-serif; */
+  font-size: 40px;
+  font-weight: bolder;
+
+  padding: 10px auto;
+}
+.section {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.sub-section-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+.sub-section-dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}

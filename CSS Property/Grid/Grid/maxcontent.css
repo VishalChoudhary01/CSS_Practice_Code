@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: #013f0f;
+    display: grid;
+    width: 1600px;
+    height: 600px;
+    grid-template-columns: 200px 300px max-content;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+    
+}
+
+.item{
+    background: #df2c2c;
+    /* max-width: auto; */
+    height: 90px;
+    
+    /* justify-content: center;
+    align-content: center; */
+    color: aliceblue;
+}
+.item a{
+    color: aliceblue;
+}

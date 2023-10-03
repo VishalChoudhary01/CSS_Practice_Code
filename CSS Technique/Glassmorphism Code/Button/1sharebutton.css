@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #023047;
+}
+.menu {
+  /* position relative because here
+     its position fixed at origin place where from we can move top bottom  */
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .toggle {
+  /* position relative from its original positon */
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 25px 15px rgba(0, 0, 0, 0.25), 0 25px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3em;
+  color: #fff;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+.menu .toggle ion-icon {
+  /* position absolute stack icon on each other */
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.menu .toggle ion-icon:nth-child(1) {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.menu.active .toggle ion-icon:nth-child(1) {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+.menu.active .toggle ion-icon:nth-child(2) {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  transform-origin: 110px;
+  transition: 0.5s;
+  transition-delay: calc(0.05s * var(--i));
+  transform: rotate(calc(360deg / 4 * var(--i)));
+  /* 4list of item (360/4) */
+  scale: 0;
+  z-index: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.menu li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -37px;
+  width: 20px;
+  height: 100px;
+  background: #fff;
+  z-index: 10;
+  transform: skewX(325deg) translateX(0);
+  box-shadow: -5px 0 0 #fff5;
+  transition: 0.5s;
+}
+.menu li:hover::before {
+  transform: skewX(325deg) translateX(180px);
+  box-shadow: -50px 0 0 #fff5;
+}
+.menu.active li {
+  scale: 1;
+}
+.menu li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: var(--clr);
+  color: #fff;
+  font-size: 2.25rem;
+  border-radius: 50%;
+  transform: rotate(calc(360deg / -4 * var(--i)));
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  height: 100vh;
+}
+button {
+  margin: 2rem;
+}
+.btn {
+  background: var(--background-color);
+  color: var(--font-color);
+  --background-color: rgb(191, 237, 169);
+  --font-color: rgb(63, 5, 5);
+  --accent-color:red;
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  /* defualt button border black 
+    here removed through border none*/
+  outline: none;
+  /* the button's focus state or if 
+    you prefer not to display the outline 
+    at all.  */
+
+  position: relative;
+  cursor: pointer;
+  --border-size: 5px;
+}
+/* Background slide */
+
+.btn.btn-background-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--accent-color);
+  
+    z-index: -1;
+    /* hide the accent color behind */
+    transform: scaleX(0);
+    /* here we can add through transform-origin
+     direction (top bottom etc)of flow by default in center */
+    transition: transform 1s ease-in-out;
+    
+}
+.btn.btn-background-slide:hover::before,
+.btn.btn-background-slide:focus::before{
+  transform: scaleX(1);
+
+}
+.btn.btn-background-slide{
+  transition:color 1s ease;
+  z-index:1;
+}
+
+/* font color change */
+.btn.btn-background-slide:hover,
+.btn.btn-background-slide:focus{
+  color: aliceblue;
+  
+}

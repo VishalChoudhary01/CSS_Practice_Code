@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+#container{
+    width: 90%;
+    margin: 0 auto;
+    background: #b0f1f9;
+    
+}
+header{
+    width: 100%;
+    background: #000;
+    min-height: 50px;
+    clear: both;
+    line-height: 50px;
+}
+/* header .clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+#logo{
+    width: 49.7%;
+    background: #cbc9c9;
+    float: left;
+    padding-left: 2%;
+    min-height: 50px;
+}
+nav{
+    width: 50%;
+    background: #cbc9c9;
+    float: right;
+    min-height: 50px;
+    text-align: center;
+}
+#banner{
+    margin-top: 10px;
+    width: 100%;
+    min-height: 200px;
+    background: #cbc9c9;
+    margin-bottom: 10px;
+    line-height: 200px;
+    text-align: center;
+}
+#about{
+    min-height: 100px;
+    width: 100%;
+    background: #cbc9c9;
+    text-align: center;
+    line-height: 100px;
+}
+
+#service{
+    margin-top: 10px;
+    width: 100%;
+    min-height: 250px;
+    background: #ee8f22;
+}
+#service .box{
+    width: 24%;
+    min-height: 240px;
+    float: left;
+    background: #09bd42;
+    line-height: 240px;
+    text-align: center;
+    
+}
+#service .box:nth-child(2){
+    margin: 0 14%;
+}
+/*#service .box::after{
+    content: "";
+ after attached on content (BOX) by 
+default take Inline imforce 
+using display block to 
+get element or style 
+after the occupied space of content (BOX) */
+
+footer{
+    margin-top: 10px;
+    width: 100%;
+    min-height: 50px;
+    background: #fb7c7c;
+    line-height: 50px;
+    text-align: center;
+}

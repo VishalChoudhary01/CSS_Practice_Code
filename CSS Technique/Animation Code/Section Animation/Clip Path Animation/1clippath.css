@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 20px auto;
+    box-sizing: border-box;
+
+}
+#container{
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+     clip-path: circle();
+    /* Default 50% */
+    clip-path: circle(30%);
+    /* custom 30%  smaller circle*/
+    clip-path: circle(50% at 0 0);
+    /*                      x , y axis */
+transition: all 1s ease-in;
+}
+#container:hover{
+    clip-path: circle(100%);
+}

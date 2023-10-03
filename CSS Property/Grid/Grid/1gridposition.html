@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Position</title>
+</head>
+<style>
+    .container{
+        width:700px;
+        height:500px;
+        background-color: aquamarine;
+        margin: 50px 0 0 50px;
+        display: grid;
+        grid-template-rows: 150px 150px;
+        grid-template-columns: 150px 150px 150px;
+        text-align: center;
+        font-size: 40px;
+        grid-gap:20px;
+    }
+    .item1{
+        background-color:indianred;
+        /* grid-row-start: 2;
+        grid-row-end: 3; */
+        grid-row:2/3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .item2{
+        background-color:orangered;
+    
+    }
+    .item3{
+        background-color:yellowgreen;
+    }
+    .item4{
+        background-color:slategray;
+    }
+    .item5{
+        background-color:hotpink;
+        /* grid-column:1/3; */
+    }
+    .item6{
+        background-color:green;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items item4">4</div>
+        <div class="items item5">5</div>
+        <div class="items item6">6</div>
+    </div>
+</body>
+</html>

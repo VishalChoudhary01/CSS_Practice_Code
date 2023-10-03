@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  transition: all 0.2s ease;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Libre Baskerville", serif;
+  min-height: 7.5vh;
+  background: #01070b;
+  padding: 0 10%;
+}
+.nav-logo img {
+  width: 200px;
+  vertical-align: middle;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 15.5px;
+  margin-left: 50px;
+  transition: all 1s ease;
+}
+.nav-links li a:hover {
+  color: rgb(183, 228, 34);
+  text-shadow: 1px 1px 10px rgb(130, 213, 243), 0 0 15px rgb(130, 213, 243),
+    0 0 20px rgb(130, 213, 243);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px double rgb(237, 12, 12);
+}
+
+.nav-mobile {
+  display: none;
+}
+.nav-mobile div {
+  
+  width: 32px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px;
+  border-radius: 2px;
+}
+@media only screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 7.5vh;
+    height: 92.5vh;
+    background-color: #01070b;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10vh 0 30vh 0;
+    transform: translate(100%);
+    transition: transform 0.8s ease-in;
+  }
+  .nav-links li a {
+    margin-left: 0;
+    font-size: 2rem;
+  }
+  .nav-mobile {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-links li {
+  opacity: 0;
+  }
+  .nav-active {
+    transform: translate(0%);
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  .nav-links li a {
+    margin-left: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .nav-links li a {
+    margin-left: 35px;
+  }
+}
+@keyframes navLinkFade {
+  0 {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.closeNav .line-1{
+  transform: rotate(-45deg) translateY(15px);
+  
+}
+.closeNav .line-2{
+  
+  opacity: 0;
+  transition: opacity .1s linear;
+}
+.closeNav .line-3{
+  transform: rotate(45deg) translateY(-15px);
+}

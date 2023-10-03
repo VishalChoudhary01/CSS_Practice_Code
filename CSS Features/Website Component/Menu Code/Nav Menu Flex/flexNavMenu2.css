@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #030631;
+}
+li,a,button{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.logo{
+    cursor: pointer;
+    margin-right:auto ;
+    
+}
+img{
+    
+    width: 15%;
+    
+}
+nav a{
+    /* list-style: none; */
+    text-decoration: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+nav li a{
+    transition: all 0.3s ease-in;
+}
+nav li a:hover{
+    color: rgb(7, 200, 62);
+    
+}
+button{
+    padding: 9px 25px;
+    background:rgba(0, 136, 168, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    
+}
+button:hover{
+    background: rgba(5, 209, 63, 0.8);
+    color: rgb(20, 20, 19);
+    transition: all 0.2s ease-in-out;
+    text-shadow:1px 1px 0 rgb(2, 26, 3) ;
+}

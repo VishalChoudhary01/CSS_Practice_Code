@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  height: 100vh;
+  background: #f78e8e;
+  display: flex;
+
+  /* if we want to flex items not squeeze when its viewport decrease just make flex-wrap:wrap */
+  /* flex-wrap: wrap; */
+  /* its will show rest item below according to viewport */
+
+  /* justify-content: center; */
+  /* align content work with  flexwrap to justify content in vertically  
+  */
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-content: center; /* its will work vertically center and justification left side as default  */
+  /* align content in flexbox give justification vertically  */
+}
+
+/* on Youtube after flex wrap align content will be center
+ when VW decrease content will go down in center but here content already in centered */
+.parent > div {
+  font-size: 30px;
+  color: aliceblue;
+  text-align: center;
+  line-height: 100px;
+}
+.child {
+  width: 100px;
+  height: 100px;
+}
+.child1 {
+  background: #d21c1c;
+}
+.child2 {
+  background: #16c024;
+}
+.child3 {
+  background: #70cd13;
+}
+.child4 {
+  background: #4e2c2c;
+}
+.child5 {
+  background: #290fb8;
+}
+.child6 {
+  background: #6b61dc;
+}
+.child7 {
+  background: #7ff35e;
+}
+.child8 {
+  background: #0e0a27;
+}

@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .parent {
+    height: 100vh;
+    background: #f78e8e;
+    display: flex;
+  }
+  .parent > div {
+    font-size: 30px;
+    color: aliceblue;
+    text-align: center;
+    line-height: 100px;
+  }
+  .child {
+    width: 100px;
+    height: 100px;
+  }
+  .child1 {
+    background: #943939;
+    /* default order 0 heigher number give more preference */
+    order: 7;
+  }
+  .child2 {
+    background: #16c024;
+    order: 2;
+  }
+  .child3 {
+    background: #70cd13;
+    order: 3;
+  }
+  .child4 {
+    background: #4e2c2c;
+    order: 4;
+  }
+  .child5 {
+    background: #290fb8;
+    order: 5;
+  }
+  .child6 {
+    background: #6b61dc;
+    order: 6;
+  }
+  /* i want to 7th at first at left side */
+  /* by default if give order its will give more preference on right */
+  .child7 {
+    background: #7ff35e;
+    order: 0;
+  }
+  .child8 {
+    background: #0e0a27;
+    order: 8;
+  }
+  /* child1 have order 0 defualt so first child7 change to order 0 for ride at start 
+  child1 given order as 7th position and all child given same order as way created in html*/
+    

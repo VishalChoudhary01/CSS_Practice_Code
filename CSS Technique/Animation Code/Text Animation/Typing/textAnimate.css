@@ -1,0 +1,135 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #171714;
+  color: aliceblue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-animated {
+  font-size: 45px;
+  font-weight: 600;
+  min-width: 280px;
+}
+.text-animated span {
+  position: relative;
+}
+.text-animated span::before {
+  content: "UI / UX Designer ";
+
+  color: red;
+  animation: words 20s infinite;
+}
+.text-animated span::after {
+  content: "";
+  background: #171714;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 135%;
+  border-left: 2px solid red;
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+  0% {
+    border-left: 1px solid rgb(147, 212, 212);
+  }
+  50% {
+    border-bottom: none;
+  }
+  100% {
+    border-left: 10px double rgb(3, 217, 53);
+  }
+}
+@keyframes words {
+  0%,
+  20% {
+    content: " Vishal Kumar Choudhary";
+    text-shadow: 1px 1px 0 whitesmoke, 0 0 2px rgb(91, 231, 48),
+      0 0 5px rgb(121, 236, 86);
+    letter-spacing: 2px;
+    border-bottom: 5px double rgb(64, 182, 245);
+    border-radius: 32%;
+    padding: 12px 18px;
+  }
+  21% {
+    border: none;
+  }
+  24%,
+  40% {
+    content: " Frontend Developer ";
+    /* text-shadow: 1px 1px 0  whitesmoke; */
+    /* letter-spacing: 4px; */
+    border-bottom: 5px double rgb(64, 182, 245);
+    border-radius: 32%;
+    padding: 12px 18px;
+  }
+  41% {
+    border: none;
+  }
+  44%,
+  60% {
+    content: " Logo Designer ";
+    /* text-shadow: 1px 1px 0  whitesmoke,0 0 2px rgb(91, 231, 48),0 0 5px rgb(121, 236, 86); */
+    /* letter-spacing: 4px; */
+    border-bottom: 5px double rgb(64, 182, 245);
+    border-radius: 32%;
+    padding: 12px 18px;
+  }
+  61% {
+    border: none;
+  }
+  64%,
+  80% {
+    content: " UI / UX Designer";
+    /* text-shadow: 1px 1px 0  whitesmoke,0 0 2px rgb(91, 231, 48),0 0 5px rgb(121, 236, 86); */
+
+    border-bottom: 5px double rgb(64, 182, 245);
+    border-radius: 32%;
+    padding: 12px 18px;
+  }
+  81% {
+    border: none;
+  }
+  84%,
+  100% {
+    content: "  Mobile App Developer";
+    text-shadow: 1px 1px 0 whitesmoke, 0 0 2px rgb(91, 231, 48),
+      0 0 5px rgb(121, 236, 86);
+    letter-spacing: 6px;
+    border-bottom: 5px inset rgb(64, 182, 245);
+    border-radius: 32%;
+    padding: 12px 18px;
+  }
+}
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+    
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 8px);
+    
+  }
+}

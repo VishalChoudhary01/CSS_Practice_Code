@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FirstJob</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="job.css" />
+  <body>
+    <div class="container">
+      <div class="apply-box">
+        <h3>FirstJob</h3>
+        <div class="form-container">
+          <div class="form-control">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter first name"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Enter last name"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Email"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="mail">Job Role</label>
+            <select name="mail" id="mail" required>
+              <option value="job" selected>Select job Role</option>
+              <option value="front-end">Front-End Developer</option>
+              <option value="back-end">Back-End Developer</option>
+              <option value="Full-stack">Full Stack Developer</option>
+              <option value="Data-analyst">Data Analyst</option>
+              <option value="Android">Android Developer</option>
+            </select>
+          </div>
+          <div class="textarea-width-size">
+          <div class="form-control">
+            <label for="address">Address</label>
+            <textarea
+              name="address"
+              id="address"
+              cols="30"
+              rows="4"
+              placeholder="Enter Address"
+            ></textarea>
+          </div>
+        </div>
+          <div class="form-control">
+            <label for="city">City</label>
+            <input name="city" id="city" placeholder="Enter City" />
+          </div>
+          <div class="form-control">
+            <label for="pincode">Pincode</label>
+            <input
+              type="number"
+              name="pincode"
+              id="pincode"
+              placeholder="Enter Pincode"
+            />
+          </div>
+
+          <div class="form-control">
+            <label for="date">Date of Birth</label>
+            <input type="date" name="date" id="date" value="1998-05-01" />
+          </div>
+          <div class="form-control">
+            <label for="upload">Upload Your CV</label>
+            <input type="file" name="upload" id="upload" />
+          </div>
+        </div>
+        <div class="button1">
+          <button type="submit">Apply Now</button>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: indianred;
+        display:flex;
+        height:200px;
+        width:600px;
+    }
+    .kid{
+        flex-basis: 100px;
+        height: 150px;
+        border: 2px solid black;
+    }
+    
+    #kid1{
+    flex-grow:3;
+    }
+    #kid2{
+    flex-grow:1;
+    }
+    #kid3{
+    flex-grow:1;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="kid" id="kid1">item 1</div>
+        <div class="kid" id="kid2">item 2</div>
+        <div class="kid" id="kid3">item 3</div>
+    </div>
+</body>
+</html>

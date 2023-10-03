@@ -1,0 +1,51 @@
+:root{
+    --fill-color:rgb(7, 82, 125);
+    --text-color:white;
+    --background:black;
+    --static-text-color:rgb(31, 3, 59);
+    --animate-text:white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+}
+.button{
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid var(--fill-color);
+    color: var(--static-text-color);
+    padding: .5em 1em;
+    border-radius: .25em;
+    position: relative;
+    isolation: isolate;
+    width: 20rem;
+    height:3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 100;
+}
+.button::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-color: var(--fill-color);
+    inset: 0;
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 450ms;
+    
+}
+.button:hover:after,.button:focus-visible::after{
+    /* transform-origin: left; */
+    scale: 1 1;
+    
+}

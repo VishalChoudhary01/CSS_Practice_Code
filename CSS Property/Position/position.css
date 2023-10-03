@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #dc7070;
+  
+}
+
+body {
+  background: #276305;
+  
+  
+}
+header {
+  background: #0b2b7d;
+
+}
+.class1 {
+  background: #83f310;
+  position: absolute;top: 200px;
+
+}
+.class2 {
+  background: #f125c5;
+}
+span {
+  background: #a70303;
+}

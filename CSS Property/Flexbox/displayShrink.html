@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrink</title>
+</head>
+<style>
+    .wrapper{
+        background-color: yellowgreen;
+        height:400px;
+        display: flex;
+        width: 600px;
+    
+    }
+    .shrink{
+        
+        border: 1px solid ;
+        height:200px;
+    }
+    #kid1{
+        flex-basis: 400px;
+        flex-shrink: 0;
+        
+    }
+    #kid2{
+        flex-basis: 400px;
+        flex-shrink:2
+    }
+    #kid3{
+        flex-basis: 400px;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="shrink" id="kid1">Number 1</div>
+        <div class="shrink" id="kid2">Number 2</div>
+        <div class="shrink" id="kid3">Number 3</div>
+    </div>
+</body>
+</html>

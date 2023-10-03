@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 30px auto;
+    box-sizing: border-box;
+}
+.frame{
+    width: 500px;
+    height: 550px;
+    border: 5px solid black;
+    perspective: 500px;
+}
+
+.shape{
+    width: 450px;
+    height: 400px;
+    background-color: aqua;
+    transform: rotateX(45deg);
+    transition: all 5s ease;
+}

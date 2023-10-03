@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning</title>
+</head>
+<style>
+    .container{
+        background: yellow;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 150px 150px ;
+        grid-gap: 20px;
+    }
+    .item{
+        border: 2px solid red;
+    }
+    .item1{
+        background:white ;
+        grid-column:1/ span 3;
+    }
+    .item2{
+        background: green;
+        
+    }
+    .item3{
+        background:indianred ;
+    }
+    .item4{
+        background:tomato ;
+    }
+    .item5{
+        background:lightgreen ;
+    }
+    .item6{
+        background: lightpink;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item item1">Number 1</div>
+        <div class="item item2">Number 2</div>
+        <div class="item item3">Number 3</div>
+        <div class="item item4">Number 4</div>
+        <div class="item item5">Number 5</div>
+        <div class="item item6">Number 6</div>
+    </div>
+</body>
+</html>

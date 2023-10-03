@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background: rgba(7, 7, 7, 0.586);
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.nav-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+.logo {
+  text-decoration: none;
+  color: rgb(240, 248, 255);
+  padding-left: 10px;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.tab-nav {
+  border: 2px solid red;
+  outline: none;
+  display: none; /* hiding checkbox */
+  /*
+outline: none;
+The outline property sets the style of an outline around an element.
+When outline: none; is applied, it removes the default outline that is typically applied to focused elements. This property is commonly used to remove the visible focus indicator when an element is selected or clicked, providing a cleaner appearance.
+display: none;:
+
+The display property determines how an element is rendered or displayed on the webpage.
+display: none; is used to hide the element completely, including its space in the layout. The element is not rendered or visible on the page.
+In the case of .tab-nav, applying display: none; would hide the checkbox input element and any associated content or styling.*/
+}
+
+.label {
+  display: none;
+  /* label hided  when page width get smaller then its visible through media query*/
+  color: rgb(240, 248, 255);
+}
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(255, 244, 240);
+  /* background color for burger line bcz of particular div {block} is background colored */
+  margin-top: 5px;
+}
+
+.nav-content .login{
+    color: red;
+    background-color: rgba(140, 239, 241, 0.816);
+    border-radius: 5px;
+    width: 80px;
+    font-weight: 900;
+    font-size: 25px;
+    position: relative;
+    top: 0px;
+    left: 30px;
+    text-shadow: 1px 1px 0 black;
+    box-shadow: 1px 2px 2px 3px rgba(5, 102, 167, 0.74);
+    
+    
+    
+}
+
+.nav-content li {
+  display: inline-block;
+  /* first we have to make inline block or block for give padding and margin */
+  /* here we making item in inline with giving paddin  */
+  padding-right: 10px;
+}
+
+.nav-content li a {
+  text-decoration: none;
+  color: rgb(240, 248, 255);
+  position: relative;
+  /* Relative Positioning:
+    When an element is set to "position: relative", 
+    it is positioned relative to its normal position in the document flow. 
+    In other words, it maintains its position in the document flow, 
+    but you can then modify its position using properties like "top", "bottom", "left", and "right". 
+    These properties move the element from its original position 
+without affecting the position of other elements on the page. */
+font-size: 22px;
+}
+.nav-content li a::after {
+  content: "";
+  display: block;
+  height: 2px; /* thickness of underline */
+  background: rgb(245, 247, 248);
+  position: absolute;
+  /* position abolute hidden 
+    till we didnt apply positiong direction */
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0,1);
+  transition: transform ease-in-out 0.5s;
+}
+
+.nav-content li a:hover::after{
+    transform: scale(1,1);
+
+}
+.content-section{
+    height: 120vh;
+    background-image: url(Image/railroad.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid; 
+    justify-items: center;
+    align-items: center; 
+}
+@media screen and (max-width:1200px){
+    .container{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:770px){
+    .label{
+        display: grid;
+        grid-column: 3;
+        padding-right: 10px;
+
+    }
+    .nav-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.6s;
+
+    }
+    .nav-checkbox input:checked ~ .nav-content{
+        max-height: 500px;
+    }
+    .nav-content li{
+        padding: 15px 0;
+    }
+
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 1500px;
+    height: 1000px;
+    background: #ded3a8;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    grid-template-rows: 0.3fr repeat(2,1.3fr) 0.5fr;
+    grid-gap: 20px;
+    
+}
+nav{
+    background: #07b91f;
+    grid-column: 1/-1;
+}
+aside{
+    background: #aacc10;
+    grid-row: 2/4;
+}
+.work{
+    background: #dd0ba5;
+}
+.service{
+    background: #700505;
+    grid-column: 2/-1;
+}
+footer{
+    background: #17035c;
+    grid-column: 1/-1;
+}

@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 0;
+}
+button {
+  margin: 2rem;
+}
+.btn {
+  background: var(--background-color);
+  color: var(--font-color);
+  --background-color: rgb(191, 237, 169);
+  --font-color: rgb(63, 5, 5);
+  padding: 0.5em 1em;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  /* defualt button border black 
+    here removed through border none*/
+  outline: none;
+  /* the button's focus state or if 
+    you prefer not to display the outline 
+    at all.  */
+
+  position: relative;
+  cursor: pointer;
+  --border-size: 5px;
+  transition: transform 0.5s;
+
+
+}
+.btn:hover{
+transform:perspective(0) scale(1.2) ;
+}
+
+.btn.btn-border-pop::before {
+  content: "";
+  position: absolute;
+  /* button relative so 
+    we got fixed point where position absolute 
+    take direction from parent\viewport\relative */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background: rgb(111, 208, 246); */
+  /* for indication where 
+this content working blue background  */
+  z-index: -1;
+  /* to hide exact button color behind the button  from z index -1*/
+  border: var(--border-size) solid var(--background-color);
+  transition:top,bottom,right,left, 0.3s ease-in;
+  
+
+}
+.btn.btn-border-pop:hover::before,
+.btn.btn-border-pop:focus::after {
+    /* spanding top left bottom right outside the button */
+    top: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+    /* -2 bcz we direction in oposite */
+    left: calc(var(--border-size) * -2);
+
+    
+}
+                   

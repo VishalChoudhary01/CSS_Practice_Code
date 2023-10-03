@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+#logo {
+  width: 100%;
+  min-height: 50px;
+  background: #cecdcd;
+  padding-left: 2%;
+  line-height: 50px;
+  /* line-height: 50px; Vertically align center */
+}
+#nav {
+  width: 100%;
+  min-height: 50px;
+  background: #cecdcd;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+#banner {
+  width: 100%;
+  min-height: 160px;
+  background: #cecdcd;
+  text-align: center;
+  line-height: 160px;
+}
+#main {
+  width: 100%;
+  /* clear: both; */
+  margin-top: 10px;
+  /* min-height: 400px; get body height we add clearfix */
+  background: #000;
+}
+#side_bar {
+  width: 30%;
+  background: #cecdcd;
+  float: left;
+  min-height: 400px;
+  line-height: 400px;
+  text-align: center;
+}
+#body {
+  width: 68%;
+  background: #cecdcd;
+  float: right;
+  min-height: 400px;
+  line-height: 400px;
+  text-align: center;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+    
+}
+footer{
+    margin-top: 10px;
+    background: #cecdcd;
+    width: 100%;
+    min-height:50px;
+    text-align: center;
+    line-height: 50px;
+}
+#container{
+    width: 80%;
+    background: #c8f363;
+    margin: auto;
+}

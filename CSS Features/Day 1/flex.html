@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .parent{
+        /* border: 2px solid black; */
+        width: 100%;
+        height: 150px;
+        display:flex;
+        /* background-color: black; */
+        justify-content:flex-end;
+        /* overflow-y: auto; */
+       
+        
+    
+
+    }
+    .child{
+        margin: 20px 0;
+        padding: 20px 10px;
+        border: 1px solid red;
+        flex-basis: 200px;
+        height: 100px;
+        font-size: 50px;
+        font-weight: bold;
+        color: aqua;
+        
+        
+    }
+    @media screen and (max-width:780px) {
+        .parent{
+            display: inline-block;
+            width: 30%;
+            height: 30%;
+            overflow-x: auto;
+        }
+    
+    }
+</style>
+<body>
+    <div class="container">
+    <div class="parent">
+        <div class="child">Home</div>
+        <div class="child">About</div>
+        <div class="child">Contact</div>
+        <div class="child">Gallery</div>
+        <div class="child">Home 1</div>
+        <div class="child">Home 2</div>
+    </div>
+</div>
+</body>
+</html>
