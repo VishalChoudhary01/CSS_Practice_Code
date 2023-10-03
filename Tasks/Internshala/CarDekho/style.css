@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 1500px;
+}
+.topheader {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+}
+.topheader img {
+  min-width: 175px;
+}
+.topheader .search input {
+  width: 28rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  box-shadow: inset 1px 1px 8px rgb(183, 179, 179);
+  border-radius: 4px;
+}
+.topheader .search :placeholder-shown {
+  padding: 15px 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  background: #fbfafa;
+}
+.topheader .search i {
+  width: 3.5rem;
+  height: 3rem;
+  background: rgba(27, 27, 27, 0.921);
+  color: #fff;
+  padding: 18px;
+  margin-left: -8px;
+  border-radius: 4px;
+}
+.action {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.action #language {
+  margin-right: -75px;
+}
+
+.action #language select {
+  width: 50%;
+  border: none;
+  font-size: 0.7rem;
+}
+
+.action #language select:focus {
+  width: 80%;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+.wishlist i {
+  padding: 0 2rem;
+  font-size: 20px;
+  font-weight: 500;
+}
+.useraction i {
+  padding-right: 5px;
+}
+.useraction a {
+  text-decoration: none;
+  color: black;
+}
